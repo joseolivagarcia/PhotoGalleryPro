@@ -4,14 +4,14 @@
 
     <item
         android:id="@+id/more"
-        android:title="Totales"
+        android:title="Menu"
         android:icon="@drawable/ic_more"
         android:iconTint="@color/white"
         app:showAsAction="always">
         <menu>
             <item
-                android:id="@+id/prueba"
-                android:title="Fragment0">
+                android:id="@+id/configuracion"
+                android:title="Configuracion">
             </item>
         </menu>
 
