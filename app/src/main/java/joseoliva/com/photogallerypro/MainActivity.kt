@@ -50,15 +50,9 @@ class MainActivity : AppCompatActivity() {
         //Fixed seria si tengo pocos tabs y se que no se van a salir de la pantalla
         tabscontainer.setTabMode(TabLayout.MODE_SCROLLABLE)
 
-<<<<<<< HEAD
-        /*inicializo el array de los tabs que van a aparecer por defecto la
-        primera vez que abras la app. Cuando el usuario haya configurado sus
-        propios tabs, ya estaran guardados en la bbdd y seran los que aparezcan
-=======
         /*inicializo el array de opciones de tabs con los tabs que haya en la bbdd,
         si no hay tabs guardados (porque sea la primera vez que usamos la app,
         pongo unos tabs por defecto
->>>>>>> daed749a2474918ef184d60ed0c7fa0e1d37c9cf
         */
         opcionesTabs = mutableListOf("Amigos", "Vacaciones", "Familia", "Selfies")
         //y añado las opciones a los tabs
@@ -76,10 +70,6 @@ class MainActivity : AppCompatActivity() {
         ).get(tabsViewModel::class.java)
 
         //observo por si cambia la var tab que la que tiene el LiveData
-<<<<<<< HEAD
-        //una vez que haya algun objeto en la bbdd se cargaran los tabs correspondientes
-=======
->>>>>>> daed749a2474918ef184d60ed0c7fa0e1d37c9cf
         viewModel.tab.observe(this) { tab ->
             tab?.let {
                 tabsLista = tab
@@ -90,17 +80,12 @@ class MainActivity : AppCompatActivity() {
                 tabscontainer.addTab(tabscontainer.newTab().setText(tabsLista!!.tab3))
                 tabscontainer.addTab(tabscontainer.newTab().setText(tabsLista!!.tab4))
                 Toast.makeText(this, "Lista Vacia", Toast.LENGTH_SHORT).show()
-<<<<<<< HEAD
-            }
-        }
-=======
 
 
             }
 
         }
 
->>>>>>> daed749a2474918ef184d60ed0c7fa0e1d37c9cf
         //para la escucha de los tabs (cuando los seleccionas)
         tabscontainer.addOnTabSelectedListener(object : OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
@@ -145,7 +130,7 @@ class MainActivity : AppCompatActivity() {
     //para indicar una accion al pulsar un item del menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.configuracion -> {
+            R.id.prueba -> {
                 openFragment(Fragment0())
                 return true
             }
