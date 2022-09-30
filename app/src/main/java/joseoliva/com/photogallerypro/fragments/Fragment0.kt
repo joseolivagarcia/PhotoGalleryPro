@@ -37,12 +37,8 @@ class Fragment0 : Fragment() {
             ViewModelProvider.AndroidViewModelFactory.getInstance(activity?.applicationContext as Application)
         ).get(tabsViewModel::class.java)
 
-        val btn: Button = mView!!.findViewById(R.id.btnprueba)
-        btn.setOnClickListener {
-            viewModel.deleteTabs()
-            viewModel.addTabs(Tabs(0, "Personales", "Mascotas", "Familia", "Amigos"))
-            Toast.makeText(context,"Pulsado",Toast.LENGTH_SHORT).show()
-        }
+        //hago lo que tenga que hacer a continuacion
+
 
         return mView
     }

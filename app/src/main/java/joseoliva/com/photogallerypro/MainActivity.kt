@@ -1,5 +1,6 @@
 package joseoliva.com.photogallerypro
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -79,9 +80,6 @@ class MainActivity : AppCompatActivity() {
                 tabscontainer.addTab(tabscontainer.newTab().setText(tabsLista!!.tab2))
                 tabscontainer.addTab(tabscontainer.newTab().setText(tabsLista!!.tab3))
                 tabscontainer.addTab(tabscontainer.newTab().setText(tabsLista!!.tab4))
-                Toast.makeText(this, "Lista Vacia", Toast.LENGTH_SHORT).show()
-
-
             }
 
         }
@@ -130,8 +128,9 @@ class MainActivity : AppCompatActivity() {
     //para indicar una accion al pulsar un item del menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.prueba -> {
-                openFragment(Fragment0())
+            R.id.config -> {
+                val intent = Intent(this,ConfigActivity::class.java)
+                startActivity(intent)
                 return true
             }
 

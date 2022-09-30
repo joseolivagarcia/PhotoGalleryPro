@@ -10,8 +10,8 @@
         app:showAsAction="always">
         <menu>
             <item
-                android:id="@+id/prueba"
-                android:title="Fragment0">
+                android:id="@+id/config"
+                android:title="Configuración">
             </item>
         </menu>
 
