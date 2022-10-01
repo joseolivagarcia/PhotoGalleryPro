@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">PhotoGalleryPro</string>
-    <string name="hola">Hello World!!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="titulo_config_tabs">Edita o escribe los nuevos tabs</string>
+    <string name="titulo_config_style">Elige un estilo</string>
+
+    <string name="elegante">Elegante</string>
+    <string name="alegre">Alegre</string>
+    <string name="divertido">Divertido</string>
+    <string name="melancolico">Melancólico</string>
 </resources>

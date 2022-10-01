@@ -1,6 +1,7 @@
 package joseoliva.com.photogallerypro
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import joseoliva.com.photogallerypro.bbdd.Tabs
@@ -25,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
     //referencio el contenedor de los tabs
     lateinit var tabscontainer: TabLayout
+    //referencio el tabs(su barra) para poder cambiarle el color de fondo
+    lateinit var colortabs: TabLayout
+    //referencio el fab para luego usarlo
+    lateinit var fab: FloatingActionButton
 
     /*Creo un array que sera en el que pondre las opciones
     que el usuario configure. Por defecto saldran 4 opciones
@@ -46,6 +52,10 @@ class MainActivity : AppCompatActivity() {
 
         //inicio el tabscontainer
         tabscontainer = binding.tabs
+
+        //inicio las var necesarias
+        colortabs = binding.tabs
+        fab = binding.fab
 
         //pongo el tabcontainer como scroolable por si no caben.
         //Fixed seria si tengo pocos tabs y se que no se van a salir de la pantalla
@@ -80,6 +90,29 @@ class MainActivity : AppCompatActivity() {
                 tabscontainer.addTab(tabscontainer.newTab().setText(tabsLista!!.tab2))
                 tabscontainer.addTab(tabscontainer.newTab().setText(tabsLista!!.tab3))
                 tabscontainer.addTab(tabscontainer.newTab().setText(tabsLista!!.tab4))
+
+                //pongo el estilo que venga con el Tabs
+                val estilo = tabsLista!!.estilo
+                when(estilo){
+                    "Elegante" ->{
+                        colortabs.setBackgroundColor(Color.parseColor("#403F3F"))
+                        fab.setBackgroundColor(Color.parseColor("#403F3F"))
+
+                    }
+                    "Alegre" ->{
+                        colortabs.setBackgroundColor(Color.parseColor("#FF9800"))
+                        fab.setBackgroundColor(Color.parseColor("#FF9800"))
+                    }
+                    "Divertido" ->{
+                        colortabs.setBackgroundColor(Color.parseColor("#8BC34A"))
+                        fab.setBackgroundColor(Color.parseColor("#8BC34A"))
+                    }
+                    "Melancolico" ->{
+                        colortabs.setBackgroundColor(Color.parseColor("#03A9F4"))
+                        fab.setBackgroundColor(Color.parseColor("#03A9F4"))
+                    }
+                    else -> {}
+                }
             }
 
         }
@@ -130,6 +163,11 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.config -> {
                 val intent = Intent(this,ConfigActivity::class.java)
+                intent.putExtra("tab1", tabsLista?.tab1)
+                intent.putExtra("tab2", tabsLista?.tab2)
+                intent.putExtra("tab3", tabsLista?.tab3)
+                intent.putExtra("tab4", tabsLista?.tab4)
+                intent.putExtra("estilo", tabsLista?.estilo)
                 startActivity(intent)
                 return true
             }

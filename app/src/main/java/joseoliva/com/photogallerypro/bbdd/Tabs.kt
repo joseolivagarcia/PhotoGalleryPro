@@ -15,5 +15,7 @@ data class Tabs(
     @ColumnInfo(name = "tab3")
     val tab3: String,
     @ColumnInfo(name = "tab4")
-    val tab4: String
+    val tab4: String,
+    @ColumnInfo(name = "estilo")
+    val estilo: String
 )

@@ -11,4 +11,8 @@
     <!-- mis colores-->
     <color name="grey">#403F3F</color>
     <color name="grey_dark">#292929</color>
+    <color name="orange">#FF9800</color>
+    <color name="blue">#03A9F4</color>
+    <color name="green">#8BC34A</color>
+    <color name="yellow">#FFEB3B</color>
 </resources>

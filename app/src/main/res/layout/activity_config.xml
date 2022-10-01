@@ -6,35 +6,172 @@
     android:layout_height="match_parent"
     tools:context=".ConfigActivity">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etTab1"
+    <TextView
+        android:id="@+id/tvtitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tab1"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etTab2"
+        android:text="@string/titulo_config_tabs"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:textStyle="italic|bold">
+
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/iltab1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tab2"
-        app:layout_constraintTop_toBottomOf="@id/etTab1"/>
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etTab3"
+        app:layout_constraintTop_toTopOf="@id/tvtitulo"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:helperText="Requerido"
+        app:startIconDrawable="@drawable/ic_edit"
+        app:counterEnabled="true"
+        app:counterMaxLength="20">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTab1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tab1"
+            android:textColorHint="@color/teal_700"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/iltab2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tab3"
-        app:layout_constraintTop_toBottomOf="@id/etTab2"/>
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etTab4"
+        app:layout_constraintTop_toBottomOf="@id/iltab1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:helperText="Requerido"
+        app:startIconDrawable="@drawable/ic_edit"
+        app:counterEnabled="true"
+        app:counterMaxLength="20">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTab2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tab2"
+            android:textColorHint="@color/teal_700"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/iltab3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tab4"
-        app:layout_constraintTop_toBottomOf="@id/etTab3"/>
+        app:layout_constraintTop_toBottomOf="@id/iltab2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:helperText="Requerido"
+        app:startIconDrawable="@drawable/ic_edit"
+        app:counterEnabled="true"
+        app:counterMaxLength="20">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTab3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tab3"
+            android:textColorHint="@color/teal_700"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/iltab4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iltab3"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:helperText="Requerido"
+        app:startIconDrawable="@drawable/ic_edit"
+        app:counterEnabled="true"
+        app:counterMaxLength="20">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTab4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="tab4"
+            android:textColorHint="@color/teal_700"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvtitulo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_config_style"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/iltab4"
+        android:layout_marginTop="20dp"
+        android:textStyle="italic|bold">
+
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvtitulo2"
+        android:layout_marginTop="15dp">
+
+        <RadioButton
+            android:id="@+id/rbelegante"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="Elegante"
+            android:checked="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/elegante"
+            android:textColor="@color/grey" />
+        <RadioButton
+            android:id="@+id/rbalegre"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="Alegre"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alegre"
+            android:textColor="@color/orange" />
+        <RadioButton
+            android:id="@+id/rbdivertido"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="Divertido"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/divertido"
+            android:textColor="@color/green" />
+        <RadioButton
+            android:id="@+id/rbmelancolico"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="Melancolico"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/melancolico"
+            android:textColor="@color/blue" />
+    </RadioGroup>
+
     <Button
         android:id="@+id/btnguardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/etTab4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:backgroundTint="@color/teal_700"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="Guardar"/>
