@@ -1,6 +1,7 @@
 package joseoliva.com.photogallerypro
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
@@ -95,21 +96,25 @@ class MainActivity : AppCompatActivity() {
                 val estilo = tabsLista!!.estilo
                 when(estilo){
                     "Elegante" ->{
-                        colortabs.setBackgroundColor(Color.parseColor("#403F3F"))
-                        fab.setBackgroundColor(Color.parseColor("#403F3F"))
+                        colortabs.setBackgroundColor(Color.parseColor("#5E5B5B"))
+                        toolbar.setBackgroundColor(Color.parseColor("#292929"))
+                        fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#5E5B5B"))
 
                     }
                     "Alegre" ->{
-                        colortabs.setBackgroundColor(Color.parseColor("#FF9800"))
-                        fab.setBackgroundColor(Color.parseColor("#FF9800"))
+                        colortabs.setBackgroundColor(Color.parseColor("#ECAD51"))
+                        toolbar.setBackgroundColor(Color.parseColor("#FF9800"))
+                        fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#ECAD51"))
                     }
                     "Divertido" ->{
-                        colortabs.setBackgroundColor(Color.parseColor("#8BC34A"))
-                        fab.setBackgroundColor(Color.parseColor("#8BC34A"))
+                        colortabs.setBackgroundColor(Color.parseColor("#9DC56E"))
+                        toolbar.setBackgroundColor(Color.parseColor("#8BC34A"))
+                        fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#9DC56E"))
                     }
                     "Melancolico" ->{
-                        colortabs.setBackgroundColor(Color.parseColor("#03A9F4"))
-                        fab.setBackgroundColor(Color.parseColor("#03A9F4"))
+                        colortabs.setBackgroundColor(Color.parseColor("#56BEED"))
+                        toolbar.setBackgroundColor(Color.parseColor("#03A9F4"))
+                        fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#03A9F4"))
                     }
                     else -> {}
                 }
