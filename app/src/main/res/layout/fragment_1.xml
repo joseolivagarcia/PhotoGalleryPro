@@ -5,10 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".fragments.Fragment1">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="FRAGMENT1" />
-
+        android:layout_height="match_parent">
+    </androidx.viewpager2.widget.ViewPager2>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/blue"
+        android:layout_gravity="bottom|right"/>
 </FrameLayout>

@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var tabscontainer: TabLayout
     //referencio el tabs(su barra) para poder cambiarle el color de fondo
     lateinit var colortabs: TabLayout
-    //referencio el fab para luego usarlo
-    lateinit var fab: FloatingActionButton
 
     /*Creo un array que sera en el que pondre las opciones
     que el usuario configure. Por defecto saldran 4 opciones
@@ -56,7 +54,6 @@ class MainActivity : AppCompatActivity() {
 
         //inicio las var necesarias
         colortabs = binding.tabs
-        fab = binding.fab
 
         //pongo el tabcontainer como scroolable por si no caben.
         //Fixed seria si tengo pocos tabs y se que no se van a salir de la pantalla
@@ -98,23 +95,19 @@ class MainActivity : AppCompatActivity() {
                     "Elegante" ->{
                         colortabs.setBackgroundColor(Color.parseColor("#5E5B5B"))
                         toolbar.setBackgroundColor(Color.parseColor("#292929"))
-                        fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#5E5B5B"))
-
+                        //fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#5E5B5B"))
                     }
                     "Alegre" ->{
                         colortabs.setBackgroundColor(Color.parseColor("#ECAD51"))
                         toolbar.setBackgroundColor(Color.parseColor("#FF9800"))
-                        fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#ECAD51"))
                     }
                     "Divertido" ->{
                         colortabs.setBackgroundColor(Color.parseColor("#9DC56E"))
                         toolbar.setBackgroundColor(Color.parseColor("#8BC34A"))
-                        fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#9DC56E"))
                     }
                     "Melancolico" ->{
                         colortabs.setBackgroundColor(Color.parseColor("#56BEED"))
                         toolbar.setBackgroundColor(Color.parseColor("#03A9F4"))
-                        fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#03A9F4"))
                     }
                     else -> {}
                 }

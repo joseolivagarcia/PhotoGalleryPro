@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 @Database(
-    entities = arrayOf(Tabs::class),
+    entities = arrayOf(Tabs::class, Imagenes::class),
     version = 2)
 
 abstract class TabsDataBase: RoomDatabase() {
