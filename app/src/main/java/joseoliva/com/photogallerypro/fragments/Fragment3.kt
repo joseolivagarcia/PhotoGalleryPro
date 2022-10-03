@@ -39,12 +39,6 @@ class Fragment3 : Fragment() {
             ViewModelProvider.AndroidViewModelFactory.getInstance(activity?.applicationContext as Application)
         ).get(tabsViewModel::class.java)
 
-        //añado manualmente para la prueba
-        viewModel.deleteImagenes()
-        viewModel.addImagen(Imagenes(0,"revistas"))
-        viewModel.addImagen(Imagenes(0,"luces"))
-        listaImagenes = viewModel.imagen
-
         //hago lo que tenga que hacer a continuacion
         //observo la lista de imagenes para añadirlas cuando sea necesario
         viewModel.imagen.observe(viewLifecycleOwner) {

@@ -1,6 +1,7 @@
 package joseoliva.com.photogallerypro.fragments
 
 import android.app.Application
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import joseoliva.com.photogallerypro.AddPictureActivity
 import joseoliva.com.photogallerypro.MainActivity
 import joseoliva.com.photogallerypro.R
 import joseoliva.com.photogallerypro.adapter.ViewPagerAdapter
@@ -52,8 +54,9 @@ class Fragment0 : Fragment() {
         }
 
         fab.setOnClickListener {
-            viewModel.addImagen(Imagenes(0,"jose"))
-            Toast.makeText(context,"Pulsado",Toast.LENGTH_SHORT).show()
+            val intent = Intent(context,AddPictureActivity::class.java)
+            intent.putExtra("codigotab", 0) //paso el codigotab, en este caso 0 para luego identificar las imagenes de cada tab
+            startActivity(intent)
         }
 
         return mView
