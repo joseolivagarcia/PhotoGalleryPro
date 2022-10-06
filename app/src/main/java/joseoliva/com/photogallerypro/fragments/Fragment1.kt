@@ -30,7 +30,7 @@ class Fragment1 : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        mView = inflater!!.inflate(R.layout.fragment_0, container, false)
+        mView = inflater!!.inflate(R.layout.fragment_1, container, false)
 
         fab = mView!!.findViewById(R.id.fab)
         //inicio el viewmodel

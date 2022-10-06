@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.textfield.TextInputEditText
+import com.squareup.picasso.Picasso
 import joseoliva.com.photogallerypro.bbdd.Imagenes
 import joseoliva.com.photogallerypro.objects.ImageController
 import joseoliva.com.photogallerypro.viewmodel.tabsViewModel
@@ -54,11 +55,14 @@ class AddPictureActivity : AppCompatActivity() {
         }
 
         btnguardar.setOnClickListener {
-            val descripcion = etdescripcion.text.toString()
+            val descripcion = etdescripcion.text.toString() //obtengo la descripcion de la imagen
+            //guardo la imagen en el dispositivo movil
             imageUri?.let {
                 ImageController.saveImage(this@AddPictureActivity,codigotab.toLong(),it)
             }
+            //creo una nueva Imagen a partir de la foto y la descripcion
             val newImagen = Imagenes(0,descripcion,imageUri.toString()!!,codigotab)
+            //y la guardo en la bbdd
             viewModel.addImagen(newImagen)
         }
 
@@ -77,7 +81,12 @@ class AddPictureActivity : AppCompatActivity() {
                 imageUri = data!!.data //la uri proviene de la data del activityonResult
 
                 //ponemos esta uri al imageview del xml
-                ivfoto.setImageURI(imageUri)
+                //lo hago con Picasso para bajarle el tamaño.
+                Picasso.with(this)
+                    .load(imageUri)
+                    .resize(720,1200)
+                    .into(ivfoto)
+                //ivfoto.setImageURI(imageUri)
             }
         }
     }

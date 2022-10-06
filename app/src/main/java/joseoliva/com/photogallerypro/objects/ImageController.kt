@@ -33,4 +33,14 @@ object ImageController {
         //escribo los bytes en el archivo y asi ya tengo el archivo de la imagen
         file.writeBytes(bytes)
     }
+
+    // Creamos la funcion para recuperar cada imagen antes de ponerla en la lista
+
+    fun getImageUri(context: Context, id: Long): Uri{
+        val file = File(context.filesDir, id.toString()) //recupero el fichero de la imagen
+
+        //si el archivo existe lo ponemos, si no, ponemos el icono de la camara
+        return if(file.exists()) Uri.fromFile(file)
+        else Uri.parse("android.resources://joseoliva.com.photogallerypro/drawable/icocamara")
+    }
 }

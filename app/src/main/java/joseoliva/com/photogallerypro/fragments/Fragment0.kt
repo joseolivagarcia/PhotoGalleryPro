@@ -44,7 +44,7 @@ class Fragment0 : Fragment() {
         ).get(tabsViewModel::class.java)
 
         //añado manualmente para la prueba
-        viewModel.deleteImagenes()
+        //viewModel.deleteImagenes()
         listaImagenes = viewModel.imagen
 
         //hago lo que tenga que hacer a continuacion
