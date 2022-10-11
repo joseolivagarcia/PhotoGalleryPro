@@ -17,13 +17,14 @@ class PagViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
     fun render(paginaImagen: Imagenes){
         textoPrueba.setText(paginaImagen.descripcion)
-        val imageUri = ImageController.getImageUri(textoPrueba.context,0) //obtengo la imagen a la que hace referencia el uri de este item
+        val imageUri = ImageController.getImageUri(textoPrueba.context,paginaImagen.id.toLong()) //obtengo la imagen a la que hace referencia el uri de este item
 
         //cargo la foto con Picasso para que no bajarla el tamaño
 
         Picasso.with(textoPrueba.context)
             .load(Uri.parse(imageUri.toString()))
             .resize(720,1200)
+            .centerCrop()
             .into(imagen)
 
 

@@ -23,6 +23,7 @@ class AddPictureActivity : AppCompatActivity() {
     //creo una var para dar un codigo a la funcion de select imagen de galeria
     private val SELECT_ACTIVITY = 50
     private var imageUri: Uri? = null
+    var idfoto = 1
 
     lateinit var binding: ActivityAddPictureBinding
     lateinit var ivfoto: ImageView
@@ -40,6 +41,20 @@ class AddPictureActivity : AppCompatActivity() {
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)
         ).get(tabsViewModel::class.java)
 
+        viewModel.imagen.observe(this){ imagen ->
+            imagen?.let {
+                val sizeimagenes = viewModel.imagen.value!!.size
+                if(sizeimagenes != 0){
+                    idfoto = sizeimagenes +1
+                    Toast.makeText(this,"tamaño lista $sizeimagenes",Toast.LENGTH_SHORT).show()
+                }else{
+                    idfoto = 1
+                    Toast.makeText(this,"tamaño lista $sizeimagenes",Toast.LENGTH_SHORT).show()
+                }
+            }
+
+        }
+
         //recojo el codigotab que me viene del fragment
         val codigotab = intent.extras!!.getInt("codigotab")
         Toast.makeText(this,"recibo el codigotab $codigotab",Toast.LENGTH_SHORT).show()
@@ -56,9 +71,11 @@ class AddPictureActivity : AppCompatActivity() {
 
         btnguardar.setOnClickListener {
             val descripcion = etdescripcion.text.toString() //obtengo la descripcion de la imagen
+
             //guardo la imagen en el dispositivo movil
             imageUri?.let {
-                ImageController.saveImage(this@AddPictureActivity,codigotab.toLong(),it)
+                ImageController.saveImage(this@AddPictureActivity,idfoto.toLong(),it)
+                Toast.makeText(this,"guardo la foto $idfoto",Toast.LENGTH_SHORT).show()
             }
             //creo una nueva Imagen a partir de la foto y la descripcion
             val newImagen = Imagenes(0,descripcion,imageUri.toString()!!,codigotab)
