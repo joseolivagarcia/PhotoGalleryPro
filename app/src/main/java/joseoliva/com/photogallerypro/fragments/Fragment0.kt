@@ -2,6 +2,8 @@ package joseoliva.com.photogallerypro.fragments
 
 import android.app.Application
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View

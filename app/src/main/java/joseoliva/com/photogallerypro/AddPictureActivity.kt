@@ -96,12 +96,10 @@ class AddPictureActivity : AppCompatActivity() {
         when{
             requestCode == SELECT_ACTIVITY && resultCode == Activity.RESULT_OK ->{
                 imageUri = data!!.data //la uri proviene de la data del activityonResult
-
                 //ponemos esta uri al imageview del xml
                 //lo hago con Picasso para bajarle el tamaño.
                 Picasso.with(this)
                     .load(imageUri)
-                    .resize(720,1200)
                     .into(ivfoto)
                 //ivfoto.setImageURI(imageUri)
             }

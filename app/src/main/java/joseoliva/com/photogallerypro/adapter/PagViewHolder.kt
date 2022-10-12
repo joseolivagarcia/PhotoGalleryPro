@@ -23,8 +23,6 @@ class PagViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
         Picasso.with(textoPrueba.context)
             .load(Uri.parse(imageUri.toString()))
-            .resize(720,1200)
-            .centerCrop()
             .into(imagen)
 
 

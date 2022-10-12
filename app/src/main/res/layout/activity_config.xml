@@ -163,7 +163,7 @@
             android:text="@string/melancolico"
             android:textColor="@color/blue" />
     </RadioGroup>
-
+    
     <Button
         android:id="@+id/btnguardar"
         android:layout_width="wrap_content"

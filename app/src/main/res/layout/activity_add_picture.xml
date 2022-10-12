@@ -10,7 +10,7 @@
         android:id="@+id/ivfoto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/icocamara"
+        android:src="@drawable/icocamara1"
         android:scaleType="centerInside"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
