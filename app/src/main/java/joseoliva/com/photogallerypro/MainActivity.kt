@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var tabscontainer: TabLayout
     //referencio el tabs(su barra) para poder cambiarle el color de fondo
     lateinit var colortabs: TabLayout
+    lateinit var estilo: String //usare esta var para cambiar el estilo
 
     /*Creo un array que sera en el que pondre las opciones
     que el usuario configure. Por defecto saldran 4 opciones
@@ -90,7 +91,7 @@ class MainActivity : AppCompatActivity() {
                 tabscontainer.addTab(tabscontainer.newTab().setText(tabsLista!!.tab4))
 
                 //pongo el estilo que venga con el Tabs
-                val estilo = tabsLista!!.estilo
+                estilo = tabsLista!!.estilo
                 when(estilo){
                     "Elegante" ->{
                         colortabs.setBackgroundColor(Color.parseColor("#5E5B5B"))

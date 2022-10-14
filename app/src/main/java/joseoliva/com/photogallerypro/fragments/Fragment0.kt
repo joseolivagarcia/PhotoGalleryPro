@@ -39,6 +39,7 @@ class Fragment0 : Fragment() {
         mView = inflater!!.inflate(R.layout.fragment_0, container, false)
 
         fab = mView!!.findViewById(R.id.fab)
+
         //inicio el viewmodel
         viewModel = ViewModelProvider(
             this,
@@ -46,7 +47,7 @@ class Fragment0 : Fragment() {
         ).get(tabsViewModel::class.java)
 
         //viewModel.deleteImagenes()
-        listaImagenes = viewModel.imagentab0
+        //listaImagenes = viewModel.imagentab0
 
         //hago lo que tenga que hacer a continuacion
         //observo la lista de imagenes para añadirlas cuando sea necesario

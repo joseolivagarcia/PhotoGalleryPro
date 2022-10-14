@@ -10,6 +10,7 @@ import android.widget.Button
 import joseoliva.com.photogallerypro.databinding.ActivityAddPictureBinding
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.textfield.TextInputEditText
 import com.squareup.picasso.Picasso
@@ -61,38 +62,48 @@ class AddPictureActivity : AppCompatActivity() {
 
         btnguardar.setOnClickListener {
 
-            //obtenemos el preference manager.
-            //lo hago aqui porque solo me interesa para esta accion
-            val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-            //recupero las preferencias, en este caso un int para el idfoto
-            idfoto = prefs.getInt(key,1) //el 1 es un valor por defecto por si no hay nada guardado (me interesa que la primera vez sea 1)
+            if(imageUri == null){
+                //creamos un AlertDialog para informar que es necesario seleccionar una foto
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Atención!")
+                    .setMessage("Debes seleccionar una fotografía")
+                val dialog = builder.create()
+                dialog.show()
+            }else{
+                //obtenemos el preference manager.
+                //lo hago aqui porque solo me interesa para esta accion
+                val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+                //recupero las preferencias, en este caso un int para el idfoto
+                idfoto = prefs.getInt(key,1) //el 1 es un valor por defecto por si no hay nada guardado (me interesa que la primera vez sea 1)
 
-            val descripcion = etdescripcion.text.toString() //obtengo la descripcion de la imagen
+                val descripcion = etdescripcion.text.toString() //obtengo la descripcion de la imagen
 
-            //guardo la imagen en el dispositivo movil
-            imageUri?.let {
-                ImageController.saveImage(this@AddPictureActivity,idfoto.toLong(),it)
-                Toast.makeText(this,"guardo la foto $idfoto",Toast.LENGTH_SHORT).show()
-                /*Al guardar la foto guardo tambien en el preferenceManager el
-                idfoto +1 para tener siempre guardado el que sera el siguiente idfoto
-                 */
-                //guardo las preferencias, lo hago a traves de un editor
-                val editor = prefs.edit()
-                editor.putInt(key,idfoto +1) //guardo el propio idfoto +1
-                editor.apply() //aplico los cambios
-                /*Si quisiera borrar los datos del sharepreferences haria...
-                un remove.
-                val editor = prefs.edit()
-                editor.remove(key)
-                editor.apply()
-                 */
+                //guardo la imagen en el dispositivo movil
+                imageUri?.let {
+                    ImageController.saveImage(this@AddPictureActivity,idfoto.toLong(),it)
+                    Toast.makeText(this,"guardo la foto $idfoto",Toast.LENGTH_SHORT).show()
+                    /*Al guardar la foto guardo tambien en el preferenceManager el
+                    idfoto +1 para tener siempre guardado el que sera el siguiente idfoto
+                     */
+                    //guardo las preferencias, lo hago a traves de un editor
+                    val editor = prefs.edit()
+                    editor.putInt(key,idfoto +1) //guardo el propio idfoto +1
+                    editor.apply() //aplico los cambios
+                    /*Si quisiera borrar los datos del sharepreferences haria...
+                    un remove.
+                    val editor = prefs.edit()
+                    editor.remove(key)
+                    editor.apply()
+                     */
+                }
+                //creo una nueva Imagen a partir de la foto y la descripcion
+                val newImagen = Imagenes(0,descripcion,imageUri.toString()!!,codigotab)
+                //y la guardo en la bbdd
+                viewModel.addImagen(newImagen)
+
+                val intent = startActivity(Intent(this,MainActivity::class.java))
             }
-            //creo una nueva Imagen a partir de la foto y la descripcion
-            val newImagen = Imagenes(0,descripcion,imageUri.toString()!!,codigotab)
-            //y la guardo en la bbdd
-            viewModel.addImagen(newImagen)
 
-            val intent = startActivity(Intent(this,MainActivity::class.java))
         }
 
 

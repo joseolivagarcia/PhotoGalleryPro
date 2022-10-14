@@ -26,6 +26,7 @@ object ImageController {
     pulsemos el boton de guardar. La foto se guarda en un directorio de nuestro telefono
      */
     fun saveImage(context: Context, id: Long, uri: Uri){
+
         val file = File(context.filesDir,id.toString()) //creamos un fichero
 
         //necesito los bytes que tiene nuestro uri
