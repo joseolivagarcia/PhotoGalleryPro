@@ -15,13 +15,21 @@ class tabsViewModel(application: Application): AndroidViewModel(application) {
 
     val repository: TabsRepository
     var tab: LiveData<Tabs>
-    var imagen: LiveData<List<Imagenes>>
+    var imagenestotal: LiveData<List<Imagenes>>
+    var imagentab0: LiveData<List<Imagenes>>
+    var imagentab1: LiveData<List<Imagenes>>
+    var imagentab2: LiveData<List<Imagenes>>
+    var imagentab3: LiveData<List<Imagenes>>
 
     init {
         val dao = TabsDataBase.getDataBase(application).getTabsDao()
         repository = TabsRepository(dao)
         tab = repository.tabs
-        imagen = repository.imagenes
+        imagenestotal = repository.imagenestotal
+        imagentab0 = repository.imagenestab0
+        imagentab1 = repository.imagenestab1
+        imagentab2 = repository.imagenestab2
+        imagentab3 = repository.imagenestab3
     }
 
     fun addTabs(tab: Tabs) = viewModelScope.launch(Dispatchers.IO){

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.widget.Button
 import joseoliva.com.photogallerypro.databinding.ActivityAddPictureBinding
 import android.widget.ImageView
@@ -23,6 +24,9 @@ class AddPictureActivity : AppCompatActivity() {
     //creo una var para dar un codigo a la funcion de select imagen de galeria
     private val SELECT_ACTIVITY = 50
     private var imageUri: Uri? = null
+
+    //defino una clave para usar el SharePreferences
+    private val  key = "MY_KEY"
     var idfoto = 1
 
     lateinit var binding: ActivityAddPictureBinding
@@ -35,29 +39,15 @@ class AddPictureActivity : AppCompatActivity() {
         binding = ActivityAddPictureBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //recojo el codigotab que me viene del fragment
+        val codigotab = intent.extras!!.getInt("codigotab")
+        Toast.makeText(this,"recibo el codigotab $codigotab",Toast.LENGTH_SHORT).show()
+
         //inicio el viewmodel
         viewModel = ViewModelProvider(
             this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application)
         ).get(tabsViewModel::class.java)
-
-        viewModel.imagen.observe(this){ imagen ->
-            imagen?.let {
-                val sizeimagenes = viewModel.imagen.value!!.size
-                if(sizeimagenes != 0){
-                    idfoto = sizeimagenes +1
-                    Toast.makeText(this,"tamaño lista $sizeimagenes",Toast.LENGTH_SHORT).show()
-                }else{
-                    idfoto = 1
-                    Toast.makeText(this,"tamaño lista $sizeimagenes",Toast.LENGTH_SHORT).show()
-                }
-            }
-
-        }
-
-        //recojo el codigotab que me viene del fragment
-        val codigotab = intent.extras!!.getInt("codigotab")
-        Toast.makeText(this,"recibo el codigotab $codigotab",Toast.LENGTH_SHORT).show()
 
         etdescripcion = binding.etdescripcion
         btnguardar = binding.btnguardarfoto
@@ -70,17 +60,39 @@ class AddPictureActivity : AppCompatActivity() {
         }
 
         btnguardar.setOnClickListener {
+
+            //obtenemos el preference manager.
+            //lo hago aqui porque solo me interesa para esta accion
+            val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+            //recupero las preferencias, en este caso un int para el idfoto
+            idfoto = prefs.getInt(key,1) //el 1 es un valor por defecto por si no hay nada guardado (me interesa que la primera vez sea 1)
+
             val descripcion = etdescripcion.text.toString() //obtengo la descripcion de la imagen
 
             //guardo la imagen en el dispositivo movil
             imageUri?.let {
                 ImageController.saveImage(this@AddPictureActivity,idfoto.toLong(),it)
                 Toast.makeText(this,"guardo la foto $idfoto",Toast.LENGTH_SHORT).show()
+                /*Al guardar la foto guardo tambien en el preferenceManager el
+                idfoto +1 para tener siempre guardado el que sera el siguiente idfoto
+                 */
+                //guardo las preferencias, lo hago a traves de un editor
+                val editor = prefs.edit()
+                editor.putInt(key,idfoto +1) //guardo el propio idfoto +1
+                editor.apply() //aplico los cambios
+                /*Si quisiera borrar los datos del sharepreferences haria...
+                un remove.
+                val editor = prefs.edit()
+                editor.remove(key)
+                editor.apply()
+                 */
             }
             //creo una nueva Imagen a partir de la foto y la descripcion
             val newImagen = Imagenes(0,descripcion,imageUri.toString()!!,codigotab)
             //y la guardo en la bbdd
             viewModel.addImagen(newImagen)
+
+            val intent = startActivity(Intent(this,MainActivity::class.java))
         }
 
 

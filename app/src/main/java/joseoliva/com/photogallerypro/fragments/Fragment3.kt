@@ -1,6 +1,7 @@
 package joseoliva.com.photogallerypro.fragments
 
 import android.app.Application
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import joseoliva.com.photogallerypro.AddPictureActivity
 import joseoliva.com.photogallerypro.R
 import joseoliva.com.photogallerypro.adapter.ViewPagerAdapter
 import joseoliva.com.photogallerypro.bbdd.Imagenes
@@ -41,12 +43,14 @@ class Fragment3 : Fragment() {
 
         //hago lo que tenga que hacer a continuacion
         //observo la lista de imagenes para añadirlas cuando sea necesario
-        viewModel.imagen.observe(viewLifecycleOwner) {
+        viewModel.imagentab3.observe(viewLifecycleOwner) {
             initRecyclerView(it)
         }
 
         fab.setOnClickListener {
-            Toast.makeText(context,"Pulsado", Toast.LENGTH_SHORT).show()
+            val intent = Intent(context, AddPictureActivity::class.java)
+            intent.putExtra("codigotab", 3) //paso el codigotab, en este caso 3 para luego identificar las imagenes de cada tab
+            startActivity(intent)
         }
 
         return mView

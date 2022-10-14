@@ -45,13 +45,12 @@ class Fragment0 : Fragment() {
             ViewModelProvider.AndroidViewModelFactory.getInstance(activity?.applicationContext as Application)
         ).get(tabsViewModel::class.java)
 
-        //añado manualmente para la prueba
         //viewModel.deleteImagenes()
-        listaImagenes = viewModel.imagen
+        listaImagenes = viewModel.imagentab0
 
         //hago lo que tenga que hacer a continuacion
         //observo la lista de imagenes para añadirlas cuando sea necesario
-        viewModel.imagen.observe(viewLifecycleOwner) {
+        viewModel.imagentab0.observe(viewLifecycleOwner) {
             initRecyclerView(it)
         }
 

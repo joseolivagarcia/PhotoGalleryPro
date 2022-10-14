@@ -12,9 +12,6 @@ import androidx.lifecycle.ViewModelProvider
 import joseoliva.com.photogallerypro.bbdd.Tabs
 import joseoliva.com.photogallerypro.databinding.ActivityConfigBinding
 import joseoliva.com.photogallerypro.viewmodel.tabsViewModel
-import yuku.ambilwarna.AmbilWarnaDialog
-import yuku.ambilwarna.AmbilWarnaDialog.OnAmbilWarnaListener
-
 
 class ConfigActivity : AppCompatActivity() {
 
