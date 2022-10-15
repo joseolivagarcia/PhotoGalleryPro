@@ -42,7 +42,6 @@ class AddPictureActivity : AppCompatActivity() {
 
         //recojo el codigotab que me viene del fragment
         val codigotab = intent.extras!!.getInt("codigotab")
-        Toast.makeText(this,"recibo el codigotab $codigotab",Toast.LENGTH_SHORT).show()
 
         //inicio el viewmodel
         viewModel = ViewModelProvider(
@@ -81,7 +80,7 @@ class AddPictureActivity : AppCompatActivity() {
                 //guardo la imagen en el dispositivo movil
                 imageUri?.let {
                     ImageController.saveImage(this@AddPictureActivity,idfoto.toLong(),it)
-                    Toast.makeText(this,"guardo la foto $idfoto",Toast.LENGTH_SHORT).show()
+
                     /*Al guardar la foto guardo tambien en el preferenceManager el
                     idfoto +1 para tener siempre guardado el que sera el siguiente idfoto
                      */

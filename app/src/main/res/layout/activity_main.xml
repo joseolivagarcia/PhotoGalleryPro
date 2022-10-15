@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            app:title="Photo Gallery Pro"
+            app:title="@string/titulo"
             android:background="@color/grey_dark"
             app:titleTextColor="@color/white" />
 

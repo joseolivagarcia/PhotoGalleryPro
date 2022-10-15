@@ -15,24 +15,41 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="90dp"/>
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etdescripcion"
+        android:layout_marginBottom="150dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descripción"
         app:layout_constraintTop_toBottomOf="@id/ivfoto"
-        app:layout_constraintBottom_toTopOf="@id/btnguardarfoto"
-        android:maxLines="2"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusTopEnd="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etdescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción (opcional)"
+            app:layout_constraintTop_toBottomOf="@id/ivfoto"
+            app:layout_constraintBottom_toTopOf="@id/btnguardarfoto"
+            android:maxLines="2" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/btnguardarfoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/etdescripcion"
+        app:layout_constraintTop_toBottomOf="@id/tilayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"
-        android:text="Guardar"/>
+        android:text="@string/btnguardar"
+        android:backgroundTint="@color/blue"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">PhotoGalleryPro</string>
+    <string name="titulo">Photo Gallery Pro</string>
 
-    <string name="titulo_config_tabs">Edita o escribe los nuevos tabs</string>
-    <string name="titulo_config_style">Elige un estilo</string>
+    <string name="titulo_configura_tabs">Edita o escribe los nuevos tabs</string>
+    <string name="titulo_define_estilo">Define un estilo</string>
 
     <string name="elegante">Elegante</string>
     <string name="alegre">Alegre</string>
     <string name="divertido">Divertido</string>
     <string name="melancolico">Melancólico</string>
+    <string name="btnguardar">GUARDAR</string>
 </resources>
