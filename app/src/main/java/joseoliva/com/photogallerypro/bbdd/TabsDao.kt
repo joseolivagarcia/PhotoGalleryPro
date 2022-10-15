@@ -27,12 +27,16 @@ interface TabsDao {
     @Query("Select * From imagenes_table Where codigotab = :codigo")
     fun getAllImagenesByCodigo(codigo: Int): LiveData<List<Imagenes>>
 
+    @Query("SELECT * FROM imagenes_table WHERE id = :id")
+    fun getById(id: Int): Imagenes
+
     @Insert
     suspend fun insertImagen(imagen: Imagenes)
 
     @Delete
-    suspend fun deleteImagen(imagen: Imagenes)
+    fun deleteImagen(imagen: Imagenes)
 
     @Query("Delete From imagenes_table")
     suspend fun deleteImagenes()
+
 }
