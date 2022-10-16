@@ -18,10 +18,14 @@
     <color name="green">#8BC34A</color>
     <color name="green_light">#A2C47B</color>
     <color name="yellow">#FFEB3B</color>
+    <color name="black1">#000000</color>
+    <color name="orange1">#FA3E02</color>
+    <color name="green1">#01AA08</color>
+    <color name="blue1">#0288F3</color>
 
     <!--array para el selector de colores-->
     <array name="colors">
-        <item>#F44336</item>
+        <item>#000000</item>
         <item>#E91E63</item>
         <item>#3F51B5</item>
         <item>#1E88E5</item>

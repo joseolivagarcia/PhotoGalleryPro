@@ -99,19 +99,23 @@ class MainActivity : AppCompatActivity() {
                     "Elegante" ->{
                         colortabs.setBackgroundColor(Color.parseColor("#5E5B5B"))
                         toolbar.setBackgroundColor(Color.parseColor("#292929"))
+                        colortabs.setSelectedTabIndicatorColor(Color.parseColor("#000000"))
                         //fab.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#5E5B5B"))
                     }
                     "Alegre" ->{
                         colortabs.setBackgroundColor(Color.parseColor("#ECAD51"))
                         toolbar.setBackgroundColor(Color.parseColor("#FF9800"))
+                        colortabs.setSelectedTabIndicatorColor(Color.parseColor("#FA3E02"))
                     }
                     "Divertido" ->{
                         colortabs.setBackgroundColor(Color.parseColor("#9DC56E"))
                         toolbar.setBackgroundColor(Color.parseColor("#8BC34A"))
+                        colortabs.setSelectedTabIndicatorColor(Color.parseColor("#01AA08"))
                     }
                     "Melancolico" ->{
                         colortabs.setBackgroundColor(Color.parseColor("#56BEED"))
                         toolbar.setBackgroundColor(Color.parseColor("#03A9F4"))
+                        colortabs.setSelectedTabIndicatorColor(Color.parseColor("#0288F3"))
                     }
                     else -> {}
                 }

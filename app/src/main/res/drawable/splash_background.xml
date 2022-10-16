@@ -11,7 +11,7 @@
         android:top="260dp"
         android:bottom="260dp"
         android:gravity="center">
-        <bitmap android:src="@drawable/splashgallerypro2"/>
+        <bitmap android:src="@drawable/splashgallerypro1"/>
     </item>
 
 </layer-list>
