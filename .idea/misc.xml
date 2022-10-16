@@ -5,14 +5,16 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.16336930455635493" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.236" />
+        <entry key="app/src/main/res/drawable/splash_background.xml" value="0.236" />
         <entry key="app/src/main/res/layout/activity_add_picture.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/activity_config.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/fragment_0.xml" value="0.4166666666666667" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_0.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_1.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/fragment_2.xml" value="0.40260416666666665" />
         <entry key="app/src/main/res/layout/fragment_3.xml" value="0.4166666666666667" />
-        <entry key="app/src/main/res/layout/item_imagen.xml" value="0.415625" />
+        <entry key="app/src/main/res/layout/item_imagen.xml" value="0.375" />
         <entry key="app/src/main/res/menu/mimenu.xml" value="0.4166666666666667" />
       </map>
     </option>

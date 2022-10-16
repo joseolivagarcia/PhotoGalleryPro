@@ -37,6 +37,6 @@ interface TabsDao {
     fun deleteImagen(imagen: Imagenes)
 
     @Query("Delete From imagenes_table")
-    suspend fun deleteImagenes()
+    suspend fun deleteAllImagenes()
 
 }

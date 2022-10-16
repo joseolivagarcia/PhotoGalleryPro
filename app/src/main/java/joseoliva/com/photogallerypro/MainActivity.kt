@@ -7,14 +7,17 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.room.Room
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import joseoliva.com.photogallerypro.bbdd.Tabs
+import joseoliva.com.photogallerypro.bbdd.TabsDataBase
 import joseoliva.com.photogallerypro.databinding.ActivityMainBinding
 import joseoliva.com.photogallerypro.fragments.Fragment0
 import joseoliva.com.photogallerypro.fragments.Fragment1
@@ -169,6 +172,24 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("estilo", tabsLista?.estilo)
                 startActivity(intent)
                 return true
+            }
+            R.id.borrar -> {
+                val dialog = AlertDialog.Builder(this)
+                    .setMessage("Quieres eliminar todas las fotografías?")
+                    .setNegativeButton("NO"){
+                            view, _ -> view.dismiss()
+                    }
+                    .setPositiveButton("SI") { view, _ ->
+                        view.dismiss()
+                        viewModel.deleteAllImagenes()
+
+                        val intent = Intent(this,MainActivity::class.java)
+                        startActivity(intent)
+                    }
+                    .setCancelable(false)
+                    .create()
+                dialog.show()
+                return  true
             }
 
         }

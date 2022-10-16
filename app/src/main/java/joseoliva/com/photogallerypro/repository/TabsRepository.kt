@@ -28,6 +28,6 @@ class TabsRepository(private val tabsDao: TabsDao) {
     }
 
     suspend fun deleteImagenes(){
-        tabsDao.deleteImagenes()
+        tabsDao.deleteAllImagenes()
     }
 }

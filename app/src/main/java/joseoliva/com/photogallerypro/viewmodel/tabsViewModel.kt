@@ -44,7 +44,7 @@ class tabsViewModel(application: Application): AndroidViewModel(application) {
         repository.insertImagenes(imagen)
     }
 
-    fun deleteImagenes() = viewModelScope.launch(Dispatchers.IO) {
+    fun deleteAllImagenes() = viewModelScope.launch(Dispatchers.IO) {
         repository.deleteImagenes()
     }
 }

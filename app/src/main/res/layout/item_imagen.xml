@@ -17,29 +17,38 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         tools:srcCompat="@tools:sample/avatars" />
-    <ImageView
-        android:id="@+id/icodelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_delete"
-        app:layout_constraintTop_toBottomOf="@id/ivfotografia"
-        app:layout_constraintStart_toStartOf="@id/ivfotografia"
-        app:layout_constraintBottom_toBottomOf="@id/tvtextopruebas"/>
 
-    <TextView
-        android:id="@+id/tvtextopruebas"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ivfotografia"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icodelete"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"/>
+        app:layout_constraintStart_toStartOf="@id/ivfotografia"
+        app:layout_constraintEnd_toEndOf="@id/ivfotografia">
+
+        <ImageView
+            android:id="@+id/icodelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_delete" />
+
+        <TextView
+            android:id="@+id/tvtextopruebas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="2"/>
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
