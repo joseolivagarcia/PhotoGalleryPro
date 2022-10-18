@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         si no hay tabs guardados (porque sea la primera vez que usamos la app,
         pongo unos tabs por defecto
         */
-        opcionesTabs = mutableListOf("Amigos", "Vacaciones", "Familia", "Selfies")
+        opcionesTabs = mutableListOf(getString(R.string.tab0),getString(R.string.tab1), getString(R.string.tab2), getString(R.string.tab3))
         //y añado las opciones a los tabs
         tabscontainer.addTab(tabscontainer.newTab().setText(opcionesTabs.get(0)))
         tabscontainer.addTab(tabscontainer.newTab().setText(opcionesTabs.get(1)))
@@ -179,7 +179,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.borrar -> {
                 val dialog = AlertDialog.Builder(this)
-                    .setMessage("Quieres eliminar todas las fotografías?")
+                    .setMessage(getString(R.string.alertDialog))
                     .setNegativeButton("NO"){
                             view, _ -> view.dismiss()
                     }

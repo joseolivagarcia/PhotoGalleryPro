@@ -37,21 +37,18 @@ class OnBoardingActivity : AppCompatActivity() {
                 //creo los items que vaya a necesitar
             OnboardingItem(
                 onboardingImage = R.drawable.icosettings,
-                tittle = "Configuración",
-                description = "Pulsando en el menú, en la opción configuración podrás configurar los tabs (pestañas)" +
-                        "con los nombres que tú quieras. Además puedes elegir un estilo personalizado para la Toolbar y " +
-                        "para la barra de las pestañas."
+                tittle = getString(R.string.itemTitle1),
+                description = getString(R.string.itemDescription1)
             ),
                 OnboardingItem(
                     onboardingImage = R.drawable.icopapelera,
-                    tittle = "Borrar todas las imágenes",
-                    description = "Pulsando en el menú en la opción borrar imágenes, eliminarás todas las imágenes de todas " +
-                            "las pestañas..."
+                    tittle = getString(R.string.itemTitle2),
+                    description = getString(R.string.itemDescription2)
                 ),
                 OnboardingItem(
                     onboardingImage = R.drawable.icoadd,
-                    tittle = "Añadir fotografía",
-                    description = "Pulsando en el símbolo + en cada pestaña, podrás seleccionar una fotografía de tu galería."
+                    tittle = getString(R.string.itemTitle3),
+                    description = getString(R.string.itemDescription2)
                 )
             )
         )

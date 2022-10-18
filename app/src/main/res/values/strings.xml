@@ -2,14 +2,40 @@
     <string name="app_name">PhotoGalleryPro</string>
     <string name="titulo">Photo Gallery Pro</string>
 
-    <string name="titulo_configura_tabs">Edita o escribe los nuevos tabs</string>
-    <string name="titulo_define_estilo">Define un estilo</string>
+    <string name="titulo_configura_tabs">Edit or write your own tabs</string>
+    <string name="titulo_define_estilo">Define an style</string>
 
-    <string name="elegante">Elegante</string>
-    <string name="alegre">Alegre</string>
-    <string name="divertido">Divertido</string>
-    <string name="melancolico">Melancólico</string>
-    <string name="btnguardar">GUARDAR</string>
-    <string name="comenzar">Comenzar</string>
+    <string name="elegante">Elegance</string>
+    <string name="alegre">Happy</string>
+    <string name="divertido">Funny</string>
+    <string name="melancolico">Blue</string>
+    <string name="btnguardar">SAVE</string>
+    <string name="comenzar">Begin</string>
     <string name="skip">skip</string>
+
+    <string name="itemTitle1">Settings</string>
+    <string name="itemTitle2">Delete all images</string>
+    <string name="itemTitle3">Add picture</string>
+
+    <string name="itemDescription1">By clicking on the menu, in the configuration option you can configure the tabs (tabs)
+                                    with the names you want. You can also choose a custom style for the Toolbar and
+                                    for the tab bar.</string>
+    <string name="itemDescription2">By clicking on the delete images option in the menu, you will delete all the images of all
+                                     tabs...</string>
+    <string name="itemDescription3">By clicking on the + symbol in each tab, you can select a photo of your
+                                    Gallery.</string>
+
+    <string name="hit_descripcion">Description (optional)</string>
+
+    <string name="tab0">Friends</string>
+    <string name="tab1">Hollydays</string>
+    <string name="tab2">Family</string>
+    <string name="tab3">Selfies</string>
+
+    <string name="alertDialog">Do you want delete all images?</string>
+    <string name="alertDialogyes">Yes</string>
+    <string name="alertDialogno">No</string>
+
+    <string name="cofiguracionMenu">Settings</string>
+    <string name="borrarMenu">Delete all images</string>
 </resources>

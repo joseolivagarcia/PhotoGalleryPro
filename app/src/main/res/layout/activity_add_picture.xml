@@ -32,7 +32,7 @@
             android:id="@+id/etdescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descripción (opcional)"
+            android:hint= "@string/hit_descripcion"
             app:layout_constraintTop_toBottomOf="@id/ivfoto"
             app:layout_constraintBottom_toTopOf="@id/btnguardarfoto"
             android:maxLines="2"/>

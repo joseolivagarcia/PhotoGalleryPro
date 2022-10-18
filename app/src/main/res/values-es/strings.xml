@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">PhotoGalleryPro</string>
+    <string name="titulo">Photo Gallery Pro</string>
+
+    <string name="titulo_configura_tabs">Edita o escribe los nuevos tabs</string>
+    <string name="titulo_define_estilo">Define un estilo</string>
+
+    <string name="elegante">Elegante</string>
+    <string name="alegre">Alegre</string>
+    <string name="divertido">Divertido</string>
+    <string name="melancolico">Melancólico</string>
+    <string name="btnguardar">GUARDAR</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="skip">skip</string>
+
+    <string name="itemTitle1">Configuración</string>
+    <string name="itemTitle2">Borrar todas las imágenes</string>
+    <string name="itemTitle3">Añadir fotografía</string>
+
+    <string name="itemDescription1">Pulsando en el menú, en la opción configuración podrás configurar los tabs (pestañas)
+                                    con los nombres que tú quieras. Además puedes elegir un estilo personalizado para la Toolbar y
+                                    para la barra de las pestañas.</string>
+    <string name="itemDescription2">Pulsando en el menú en la opción borrar imágenes, eliminarás todas las imágenes de todas
+                                    las pestañas...</string>
+    <string name="itemDescription3">Pulsando en el símbolo + en cada pestaña, podrás seleccionar una fotografía de tu
+                                    galería.</string>
+
+    <string name="hit_descripcion">Descripción (opcional)</string>
+
+    <string name="tab0">Amigos</string>
+    <string name="tab1">Vacaciones</string>
+    <string name="tab2">Familia</string>
+    <string name="tab3">Selfies</string>
+
+    <string name="alertDialog">¿Quieres borrar todas las fotografías?</string>
+    <string name="alertDialogyes">Si</string>
+    <string name="alertDialogno">No</string>
+
+    <string name="cofiguracionMenu">Configuración</string>
+    <string name="borrarMenu">Borrar todas las imágenes</string>
+
+
+</resources>
