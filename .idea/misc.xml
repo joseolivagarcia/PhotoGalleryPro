@@ -5,16 +5,23 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.16336930455635493" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.236" />
+        <entry key="app/src/main/res/drawable/icon_background.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/icon_outer_background.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/indicator_active_background.xml" value="0.118" />
+        <entry key="app/src/main/res/drawable/indicator_inactive_background.xml" value="0.118" />
         <entry key="app/src/main/res/drawable/splash_background.xml" value="0.236" />
+        <entry key="app/src/main/res/drawable/view_pager_background.xml" value="0.118" />
         <entry key="app/src/main/res/layout/activity_add_picture.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/activity_config.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_on_boarding.xml" value="0.19" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_0.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_1.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/fragment_2.xml" value="0.40260416666666665" />
         <entry key="app/src/main/res/layout/fragment_3.xml" value="0.4166666666666667" />
         <entry key="app/src/main/res/layout/item_imagen.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/onboarding_item_container.xml" value="0.337890625" />
         <entry key="app/src/main/res/menu/mimenu.xml" value="0.4166666666666667" />
       </map>
     </option>

@@ -10,4 +10,6 @@
     <string name="divertido">Divertido</string>
     <string name="melancolico">Melancólico</string>
     <string name="btnguardar">GUARDAR</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="skip">skip</string>
 </resources>
