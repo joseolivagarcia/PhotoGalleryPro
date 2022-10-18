@@ -10,6 +10,7 @@
 
     <!-- mis colores-->
     <color name="grey">#5E5B5B</color>
+    <color name="greylight">#C8C3C3</color>
     <color name="grey_dark">#292929</color>
     <color name="orange">#FF9800</color>
     <color name="orange_light">#ECAD51</color>

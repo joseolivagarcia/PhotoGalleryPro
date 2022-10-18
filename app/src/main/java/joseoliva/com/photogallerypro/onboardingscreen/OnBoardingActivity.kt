@@ -35,6 +35,11 @@ class OnBoardingActivity : AppCompatActivity() {
         onboardingItemsAdapter = OnboardingItemsAdapter(
             listOf(
                 //creo los items que vaya a necesitar
+                OnboardingItem(
+                    onboardingImage = R.drawable.icoinstrucciones,
+                    tittle = getString(R.string.itemTitle0),
+                    description = getString(R.string.itemDescription0)
+                ),
             OnboardingItem(
                 onboardingImage = R.drawable.icosettings,
                 tittle = getString(R.string.itemTitle1),
@@ -46,7 +51,7 @@ class OnBoardingActivity : AppCompatActivity() {
                     description = getString(R.string.itemDescription2)
                 ),
                 OnboardingItem(
-                    onboardingImage = R.drawable.icoadd,
+                    onboardingImage = R.drawable.icoanadir,
                     tittle = getString(R.string.itemTitle3),
                     description = getString(R.string.itemDescription2)
                 )

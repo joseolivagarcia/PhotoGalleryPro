@@ -13,10 +13,12 @@
     <string name="comenzar">Comenzar</string>
     <string name="skip">skip</string>
 
+    <string name="itemTitle0">Guía</string>
     <string name="itemTitle1">Configuración</string>
     <string name="itemTitle2">Borrar todas las imágenes</string>
     <string name="itemTitle3">Añadir fotografía</string>
 
+    <string name="itemDescription0">Lee la siguiente guía para navegar por la app.</string>
     <string name="itemDescription1">Pulsando en el menú, en la opción configuración podrás configurar los tabs (pestañas)
                                     con los nombres que tú quieras. Además puedes elegir un estilo personalizado para la Toolbar y
                                     para la barra de las pestañas.</string>

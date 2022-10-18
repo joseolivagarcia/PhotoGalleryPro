@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
+    android:background="@color/greylight"
     tools:context=".onboardingscreen.OnBoardingActivity">
 
     <androidx.viewpager2.widget.ViewPager2
@@ -34,7 +34,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/skip"
-        android:textColor="@color/orange1"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -63,6 +63,7 @@
         android:layout_height="45dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/icon_background"
+        android:backgroundTint="@color/black"
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_right"
         app:layout_constraintBottom_toTopOf="@id/buttongetstarted"
@@ -81,7 +82,7 @@
         android:textAllCaps="false"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:backgroundTint="@color/orange1"
+        app:backgroundTint="@color/black"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

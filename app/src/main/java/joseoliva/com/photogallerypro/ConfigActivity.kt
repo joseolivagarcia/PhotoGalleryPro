@@ -38,22 +38,22 @@ class ConfigActivity : AppCompatActivity() {
         if (intent.getStringExtra("tab1") != null) {
             tab1recibido = intent.getStringExtra("tab1")!!
         } else {
-            tab1recibido = "Amigos"
+            tab1recibido = getString(R.string.tab0)
         }
         if (intent.getStringExtra("tab2") != null) {
             tab2recibido = intent.getStringExtra("tab2")!!
         } else {
-            tab2recibido = "Vacaciones"
+            tab2recibido = getString(R.string.tab1)
         }
         if (intent.getStringExtra("tab3") != null) {
             tab3recibido = intent.getStringExtra("tab3")!!
         } else {
-            tab3recibido = "Familia"
+            tab3recibido = getString(R.string.tab2)
         }
         if (intent.getStringExtra("tab4") != null) {
             tab4recibido = intent.getStringExtra("tab4")!!
         } else {
-            tab4recibido = "Selfies"
+            tab4recibido = getString(R.string.tab3)
         }
         if (intent.getStringExtra("estilo") != null) {
             estilorecibido = intent.getStringExtra("estilo").toString()

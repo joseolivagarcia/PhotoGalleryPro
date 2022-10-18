@@ -8,16 +8,17 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black">
     </androidx.viewpager2.widget.ViewPager2>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginRight="20dp"
         android:src="@drawable/ic_add"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/greylight"
         android:layout_gravity="bottom|right"/>
 
 </FrameLayout>

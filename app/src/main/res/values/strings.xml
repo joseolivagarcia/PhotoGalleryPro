@@ -13,10 +13,12 @@
     <string name="comenzar">Begin</string>
     <string name="skip">skip</string>
 
+    <string name="itemTitle0">Guide</string>
     <string name="itemTitle1">Settings</string>
     <string name="itemTitle2">Delete all images</string>
     <string name="itemTitle3">Add picture</string>
 
+    <string name="itemDescription0">Read this guide to navigate throught the app.</string>
     <string name="itemDescription1">By clicking on the menu, in the configuration option you can configure the tabs (tabs)
                                     with the names you want. You can also choose a custom style for the Toolbar and
                                     for the tab bar.</string>
