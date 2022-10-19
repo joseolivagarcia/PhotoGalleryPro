@@ -53,7 +53,7 @@ class OnBoardingActivity : AppCompatActivity() {
                 OnboardingItem(
                     onboardingImage = R.drawable.icoanadir,
                     tittle = getString(R.string.itemTitle3),
-                    description = getString(R.string.itemDescription2)
+                    description = getString(R.string.itemDescription3)
                 )
             )
         )
